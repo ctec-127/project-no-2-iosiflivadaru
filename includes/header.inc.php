@@ -1,3 +1,6 @@
+<?php 
+    require 'includes/functions.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,17 @@
     <!-- Bootstrap CSS (CDN) -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Project 2 - Page 1</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <?php
+        if (isset($_GET['fontSize'])) {
+            if ($_GET['fontSize'] == 'sm') {
+                echo '<link rel="stylesheet" href="css/smfont.css">';
+            } else if ($_GET['fontSize'] == 'lg') {
+                echo '<link rel="stylesheet" href="css/lgfont.css">';
+            }
+        }
+    ?>
+    <title>Project 2 - Iosif Livadaru</title>
 </head>
-<body>
+<body class=" <?php dark(); ?>">
+<div class="container">
